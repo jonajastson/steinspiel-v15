@@ -20,5 +20,8 @@ basic.forever(function () {
         Stein.set(LedSpriteProperty.Brightness, 255)
     }
     Stein.set(LedSpriteProperty.Y, Steinhöhe)
-    basic.pause(100)
+    if (Stein.isTouching(Spieler)) {
+        basic.setLedColor(0xff0000)
+    }
+    basic.pause(200)
 })
